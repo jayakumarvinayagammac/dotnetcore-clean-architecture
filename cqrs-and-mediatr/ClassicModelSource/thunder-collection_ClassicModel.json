@@ -1,0 +1,105 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "ClassicModel",
+    "collectionId": "9d969728-ef13-4184-80ac-e91f885953bb",
+    "dateExported": "2024-09-17T18:49:53.663Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "e6d1dfd6-4542-467d-ab73-cf341fa42b53",
+            "name": "Customer",
+            "containerId": "",
+            "created": "2024-09-14T20:09:00.538Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "11a2b8c9-afec-40e9-893d-d652969d24f2",
+            "name": "Order",
+            "containerId": "",
+            "created": "2024-09-14T20:09:06.633Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "c618856e-e662-42db-a367-24b5d8288e37",
+            "name": "Office",
+            "containerId": "",
+            "created": "2024-09-17T17:05:01.832Z",
+            "sortNum": 30000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "283c96a7-c7c7-4474-b587-b30c2c1b35c6",
+            "colId": "9d969728-ef13-4184-80ac-e91f885953bb",
+            "containerId": "11a2b8c9-afec-40e9-893d-d652969d24f2",
+            "name": "GetOrders",
+            "url": "https://localhost:7164/api/Order",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-14T20:09:17.017Z",
+            "modified": "2024-09-14T20:09:22.553Z",
+            "headers": []
+        },
+        {
+            "_id": "5e3ec14d-6684-4b18-a1f5-70e13007951f",
+            "colId": "9d969728-ef13-4184-80ac-e91f885953bb",
+            "containerId": "11a2b8c9-afec-40e9-893d-d652969d24f2",
+            "name": "GetOrderByOrderNumber",
+            "url": "https://localhost:7164/api/Order",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-14T20:09:31.514Z",
+            "modified": "2024-09-14T20:09:31.514Z",
+            "headers": []
+        },
+        {
+            "_id": "9f862271-d251-48bc-aefb-27bd03ff3c0d",
+            "colId": "9d969728-ef13-4184-80ac-e91f885953bb",
+            "containerId": "e6d1dfd6-4542-467d-ab73-cf341fa42b53",
+            "name": "CustomerTransaction",
+            "url": "https://localhost:7164/api/Customer/GetCustomerTransaction?customerNumber=146",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-09-14T20:10:30.393Z",
+            "modified": "2024-09-14T20:23:16.396Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "customerNumber",
+                    "value": "146",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "141cc212-5867-4b10-8772-0dcbefdcc29a",
+            "colId": "9d969728-ef13-4184-80ac-e91f885953bb",
+            "containerId": "c618856e-e662-42db-a367-24b5d8288e37",
+            "name": "GetOffice",
+            "url": "https://localhost:7164/api/Office/GetOffice",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-09-17T17:05:10.930Z",
+            "modified": "2024-09-17T17:05:15.272Z",
+            "headers": []
+        },
+        {
+            "_id": "5439ceaa-5378-4dee-b27d-23dea9ef37a6",
+            "colId": "9d969728-ef13-4184-80ac-e91f885953bb",
+            "containerId": "c618856e-e662-42db-a367-24b5d8288e37",
+            "name": "CreateOffice",
+            "url": "https://localhost:7164/api/Office/CreateOffice",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-09-17T17:38:05.507Z",
+            "modified": "2024-09-17T18:02:34.101Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"officeCode\": \"\",\n  \"city\": \"Villupuram\",\n  \"phone\": \"04146-261231\",\n  \"addressLine1\": \"Sengadu\",\n  \"addressLine2\": \"Easwar Nagar\",\n  \"state\": \"Tamil Nadu\",\n  \"country\": \"Great India\",\n  \"postalCode\": \"605108\",\n  \"territory\": \"Center TN\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "ref": "2oaRsUXR-QX1TLlRFim0fWNWtpaQTz1u6CMHR-LJXV5iz7raQ6Zkn91dhpL2l9ewukGFNc4V5Vh9TGQB_4EkTA"
+}

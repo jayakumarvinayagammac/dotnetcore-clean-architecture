@@ -17,6 +17,7 @@ public static class OfficeConfigureServiceCollectionExtensions
         // Handler
         services.AddTransient<IRequestHandler<GetOfficeQuery, IEnumerable<OfficeDTO>>, GetOfficeQueryHandler>();
         services.AddTransient<IRequestHandler<CreateOfficeCommand, OfficeCreationResult>, CreateOfficeCommandHandler>();        
+        services.AddTransient<IRequestHandler<RemoveOfficeCommand, OfficeRemoveResult>, RemoveOfficeCommandHandler>(); 
         return services;
     }
 }

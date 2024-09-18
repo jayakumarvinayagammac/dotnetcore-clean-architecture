@@ -51,5 +51,24 @@ public class OfficeController : BaseController
             throw;
         }        
     }
+
+    [HttpDelete]
+    [Route("RemoveOffice")]
+    [ProducesResponseType<string>(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    [ProducesResponseType(StatusCodes.Status500InternalServerError)]
+    public async Task<IActionResult> DeleteOffice(string officeCode)
+    {
+        try
+        {
+            var removeResultOfficeCode = await _mediator.Send(new RemoveOfficeCommand(officeCode));
+            return Ok(removeResultOfficeCode);
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
+    }
     
 }

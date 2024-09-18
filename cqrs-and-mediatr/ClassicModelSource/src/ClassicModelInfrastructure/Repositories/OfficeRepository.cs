@@ -55,4 +55,24 @@ public class OfficeRepository : IOfficeRepository
     {
         throw new NotImplementedException();
     }
+
+    public async Task<string> RemoveOfficeAsync(string officeCode)
+    {
+        try
+        {
+            var office = await _classicModelsContext
+                            .Offices
+                            .Where(x => x.OfficeCode == officeCode)
+                            .FirstOrDefaultAsync();
+            _classicModelsContext.Offices.Remove(office);
+            await _classicModelsContext.SaveChangesAsync();
+            return officeCode;
+        }
+        catch (System.Exception)
+        {
+
+            throw;
+        }
+
+    }
 }

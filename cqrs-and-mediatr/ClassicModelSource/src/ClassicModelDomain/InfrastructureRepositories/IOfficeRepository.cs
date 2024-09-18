@@ -7,4 +7,5 @@ public interface IOfficeRepository
     Task<IEnumerable<OfficeModel>> GetOfficeAsync();
     Task<string> GetOfficeAsync(string officeCode);
     Task<string> CreatetOfficeAsync(OfficeModel officeModel);
+    Task<string> RemoveOfficeAsync(string officeCode);
 }
